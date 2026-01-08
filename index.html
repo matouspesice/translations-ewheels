@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-Bike Questions Editor</title>
+  <title>E-Bike Questions Editor test</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
@@ -19,152 +19,786 @@
   <script type="text/babel">
     const { useState } = React;
 
+    // EXACT COPY of your original JSON - preserving all field names exactly
     const initialData = {
-      questions: [
+  "parameters": [
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-battery-capacity-exact-wh",
+      "name": "Batterikapasitet (eksakt)",
+      "options": []
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-battery-range",
+      "name": "Batterikapasitet",
+      "options": [
         {
-          id: "rider-height-slided-cm",
-          name: "Kroppshøyde (glidefelt)",
-          nameEN: "Rider Height Slided",
-          title: "Skriv inn <H>høyden din</H> for å se bare sykler som passer deg.",
-          titleEN: "Enter your height to see only bikes that will fit you.",
-          type: "filtering",
-          questionType: "numeric",
-          answers: []
+          "value": "battery-400-599",
+          "name": "400–599 Wh"
         },
         {
-          id: "height-question",
-          name: "Kroppshøyde",
-          nameEN: "Rider Height",
-          title: "Hvor høy er du?",
-          titleEN: "How tall are you?",
-          type: "filtering",
-          questionType: "select",
-          answers: [
-            { id: "under-165-cm", name: "Under 165 cm", nameEN: "Under 165 cm", bucketDefinition: "Sikrer rammestørrelse <strong>Small</strong> (150–165 cm).", bucketDefinitionEN: "Ensures frame size Small (150-165 cm)." },
-            { id: "165-175-cm", name: "165–175 cm", nameEN: "165-175 cm", bucketDefinition: "Anbefaler rammestørrelse <strong>Medium</strong> (165–175 cm) for best komfort.", bucketDefinitionEN: "Recommends frame size Medium (165-175 cm) for best comfort." },
-            { id: "175-185-cm", name: "175–185 cm", nameEN: "175-185 cm", bucketDefinition: "Krever rammestørrelse <strong>Large</strong> (175–185 cm) for riktig passform.", bucketDefinitionEN: "Requires frame size Large (175-185 cm) for proper fit." },
-            { id: "over-185-cm", name: "Over 185 cm", nameEN: "Over 185 cm", bucketDefinition: "Betyr at jeg trenger rammestørrelse <strong>X‑Large</strong> (185+ cm).", bucketDefinitionEN: "Means I need frame size X-Large (185+ cm)." }
-          ]
+          "value": "battery-600-899",
+          "name": "600–899 Wh"
         },
         {
-          id: "intended-use-question",
-          name: "Bruksområde",
-          nameEN: "Intended Use",
-          title: "Hva er hovedformålet med elsykkelen?",
-          titleEN: "What's your main reason for getting an e-bike?",
-          type: "filtering",
-          questionType: "multiselect",
-          answers: [
-            { id: "city-commuting", name: "Pendling i byen", nameEN: "City commuting", bucketDefinition: "Gir en <strong>pendlersykkel</strong> optimalisert for bykjøring.", bucketDefinitionEN: "Gives a Commuter bike optimized for city travel." },
-            { id: "heavy-cargo-family", name: "Tung last / familie", nameEN: "Heavy cargo / family", bucketDefinition: "Gir en <strong>lastesykkel</strong> (longtail) for tung transport.", bucketDefinitionEN: "Provides a Cargo longtail bike for heavy hauling." },
-            { id: "off-road-trails", name: "Terreng og stier", nameEN: "Off-road & trails", bucketDefinition: "Gir en <strong>terrengsykkel</strong> (eMTB) for krevende stier.", bucketDefinitionEN: "Gives a Mountain eMTB for rough trails." },
-            { id: "touring-long-distance", name: "Tursykling og langdistanse", nameEN: "Touring & long-distance", bucketDefinition: "Velger en <strong>trekking-/tursykkel</strong> for lange turer.", bucketDefinitionEN: "Selects a Trekking touring e-bike for long rides." },
-            { id: "casual-cruiser", name: "Rolige turer / cruiser", nameEN: "Casual / cruiser", bucketDefinition: "Gir en <strong>cruiser</strong>/fatbike for avslappede turer.", bucketDefinitionEN: "Gives a Cruiser/fatbike for relaxed, casual rides." }
-          ]
-        },
-        {
-          id: "terrain-hills-question",
-          name: "Terreng og bakker",
-          nameEN: "Terrain & Hills",
-          title: "Hvilket terreng sykler du mest i?",
-          titleEN: "What kind of terrain will you ride most?",
-          type: "profiling",
-          questionType: "multiselect",
-          answers: [
-            { id: "mostly-flat-roads", name: "For det meste flate veier", nameEN: "Mostly flat roads", bucketDefinition: "Prioriterer <strong>70–80 Nm</strong> motormoment for lette, effektive turer på flatmark.", bucketDefinitionEN: "Prioritizes 70-80 Nm motor torque for easy, efficient flat rides." },
-            { id: "rolling-hills", name: "Småkupert terreng", nameEN: "Rolling hills", bucketDefinition: "Sikter mot <strong>80–95 Nm</strong> moment for trygg klatring i småkupert terreng.", bucketDefinitionEN: "Targets 80-95 Nm torque to climb rolling hills confidently." },
-            { id: "steep-hills-heavy-loads", name: "Bratte bakker / tung last", nameEN: "Steep hills / heavy loads", bucketDefinition: "Gir <strong>95–115 Nm</strong> moment så du takler bratte bakker og tung last.", bucketDefinitionEN: "Delivers 95-115 Nm torque for steep hills and heavy loads." },
-            { id: "mixed-surfaces-gravel", name: "Blandet underlag / grus", nameEN: "Mixed surfaces / gravel", bucketDefinition: "Gir <strong>grusklare</strong> terrengegenskaper for røft, variert underlag.", bucketDefinitionEN: "Gives gravel-ready terrain capability for rough, mixed surfaces." }
-          ]
-        },
-        {
-          id: "battery-range-question",
-          name: "Batteri og rekkevidde",
-          nameEN: "Battery & Range",
-          title: "Hvor langt sykler du vanligvis før du lader?",
-          titleEN: "How far will you typically ride before recharging?",
-          type: "profiling",
-          questionType: "select",
-          answers: [
-            { id: "short-daily-rides-20-40km", name: "Korte daglige turer (20–40 km)", nameEN: "Short daily rides (20-40 km)", bucketDefinition: "Velger et batteri på <strong>400–599 Wh</strong> for kort daglig rekkevidde.", bucketDefinitionEN: "Chooses a 400-599 Wh battery for short daily range." },
-            { id: "medium-commutes-40-70km", name: "Middels pendling (40–70 km)", nameEN: "Medium commutes (40-70 km)", bucketDefinition: "Velger <strong>600–899 Wh</strong> batteri for middels pendling.", bucketDefinitionEN: "Selects a 600-899 Wh battery for medium commutes." },
-            { id: "long-rides-70-100plus-km", name: "Lange turer (70–100+ km)", nameEN: "Long rides (70-100+ km)", bucketDefinition: "Velger <strong>900+ Wh</strong> batteri for maksimal rekkevidde.", bucketDefinitionEN: "Picks a 900+ Wh battery to maximize range." },
-            { id: "multi-day-heavy-use", name: "Flere dager / hard bruk", nameEN: "Multi-day / heavy use", bucketDefinition: "Går for <strong>900+ Wh</strong> batteri for flerdagers og hard bruk.", bucketDefinitionEN: "Opts for 900+ Wh battery for multi-day, heavy-use demands." }
-          ]
-        },
-        {
-          id: "cargo-capacity-question",
-          name: "Behov for last",
-          nameEN: "Cargo Needs",
-          title: "Hva pleier du å frakte?",
-          titleEN: "What will you typically carry?",
-          type: "profiling",
-          questionType: "select",
-          answers: [
-            { id: "light-loads-groceries", name: "Bare meg selv", nameEN: "Only myself", bucketDefinition: "Støtter <strong>100 kg</strong> nyttelast.", bucketDefinitionEN: "Supports 100 kg payload." },
-            { id: "kids-regular-loads", name: "Vanlig last", nameEN: "Regular loads", bucketDefinition: "Gir <strong>120–140 kg</strong> nyttelast til daglige ærend.", bucketDefinitionEN: "Provides 120-140 kg payload for daily errands." },
-            { id: "heavy-commercial-loads", name: "Barn / tung last", nameEN: "Kids / heavy loads", bucketDefinition: "Sikrer <strong>140+ kg</strong> nyttelast og økt moment.", bucketDefinitionEN: "Ensures 140+ kg payload and boosted torque." }
-          ]
-        },
-        {
-          id: "performance-intensity-question",
-          name: "Ytelsesnivå",
-          nameEN: "Performance Level",
-          title: "Hvor hardt kommer du til å sykle?",
-          titleEN: "How intensely will you ride?",
-          type: "profiling",
-          questionType: "select",
-          answers: [
-            { id: "casual-weekend-rides", name: "Pendling / rolige turer", nameEN: "Commuting / casual rides", bucketDefinition: "Velger <strong>innstegskomponenter</strong> til pendling.", bucketDefinitionEN: "Chooses entry-level components for commuting." },
-            { id: "regular-enthusiast", name: "Aktiv mosjonist", nameEN: "Regular enthusiast", bucketDefinition: "Velger <strong>mellomklassekomponenter</strong> for god balanse.", bucketDefinitionEN: "Picks mid-level components for balance." },
-            { id: "serious-competitive", name: "Seriøs / konkurranse", nameEN: "Serious / competitive", bucketDefinition: "Krever <strong>toppklassekomponenter</strong> og høyt moment.", bucketDefinitionEN: "Demands high-end components and torque." }
-          ]
-        },
-        {
-          id: "ownership-priority-question",
-          name: "Prioritet ved eierskap",
-          nameEN: "Ownership Priority",
-          title: "Hva er viktigst på sikt?",
-          titleEN: "What matters most long-term?",
-          type: "profiling",
-          questionType: "select",
-          answers: [
-            { id: "maximum-reliability", name: "Maksimal driftssikkerhet", nameEN: "Maximum reliability", bucketDefinition: "Prioriterer <strong>komponenter fra kjente merker</strong>.", bucketDefinitionEN: "Prioritizes brand-backed components." },
-            { id: "easy-service-access", name: "Enkel service", nameEN: "Easy service access", bucketDefinition: "Foretrekker <strong>komponenter fra kjente merker</strong> for enkel service.", bucketDefinitionEN: "Prefers brand components for easy service." },
-            { id: "low-running-costs", name: "Lave driftskostnader", nameEN: "Low running costs", bucketDefinition: "Velger <strong>lite vedlikehold</strong> i drivverk.", bucketDefinitionEN: "Chooses low-maintenance drivetrain." },
-            { id: "performance-first", name: "Ytelse først", nameEN: "Performance first", bucketDefinition: "Prioriterer <strong>toppklassekomponenter</strong>.", bucketDefinitionEN: "Prioritizes high-end components." }
-          ]
-        },
-        {
-          id: "frame-type-question",
-          name: "Rammetype",
-          nameEN: "Frame Type",
-          title: "Hvilken rammetype ønsker du?",
-          titleEN: "Which frame type do you prefer?",
-          type: "filtering",
-          questionType: "select",
-          answers: [
-            { id: "high-entry", name: "Høyt innsteg", nameEN: "High entry", bucketDefinition: "Høyt innsteg gir maksimal rammestivhet og klassisk uttrykk.", bucketDefinitionEN: "High entry provides maximum frame stiffness and classic look." },
-            { id: "low-entry", name: "Lavt innsteg", nameEN: "Low entry", bucketDefinition: "Lavt innsteg prioriterer enkel av- og påstigning.", bucketDefinitionEN: "Low entry prioritizes easy mounting and dismounting." },
-            { id: "medium-high-entry", name: "Mellomhøyt innsteg", nameEN: "Medium-high entry", bucketDefinition: "Mellomhøyt innsteg balanserer stabilitet og tilgjengelighet.", bucketDefinitionEN: "Medium-high entry balances stability and accessibility." }
-          ]
-        },
-        {
-          id: "dealbreakers-question",
-          name: "Må ha",
-          nameEN: "Must-have Features",
-          title: "Noen funksjoner du må ha?",
-          titleEN: "Any features you must have?",
-          type: "filtering",
-          questionType: "multiselect",
-          answers: [
-            { id: "fenders", name: "Skjermer", nameEN: "Fenders", bucketDefinition: "", bucketDefinitionEN: "" },
-            { id: "torque-sensor", name: "Momentføler", nameEN: "Torque sensor", bucketDefinition: "Gir <strong>momentføler</strong> for naturlig tråkkfølelse.", bucketDefinitionEN: "Provides torque sensor for natural pedal feel." },
-            { id: "removable-battery", name: "Uttakbart batteri", nameEN: "Removable battery", bucketDefinition: "Gir <strong>uttakbart batteri</strong> for enkel lading.", bucketDefinitionEN: "Provides removable battery for easy charging." },
-            { id: "brand-components", name: "Komponenter fra kjente merker", nameEN: "Brand components", bucketDefinition: "Prioriterer sykler med <strong>komponenter fra kjente merker</strong>.", bucketDefinitionEN: "Prioritizes bikes with brand-backed components." }
-          ]
+          "value": "battery-900-plus",
+          "name": "900+ Wh"
         }
       ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-battery-removable",
+      "name": "Uttakbart batteri",
+      "options": [
+        {
+          "value": "removable-no",
+          "name": "Ikke uttakbart"
+        },
+        {
+          "value": "removable-yes",
+          "name": "Uttakbart"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-feature-removable-battery",
+      "name": "Uttakbart batteri",
+      "options": [
+        {
+          "value": "feature-removable-battery-no",
+          "name": "nei"
+        },
+        {
+          "value": "feature-removable-battery-yes",
+          "name": "ja"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-cargo-capacity",
+      "name": "Nyttelast",
+      "options": [
+        {
+          "value": "payload-100",
+          "name": "~100 kg"
+        },
+        {
+          "value": "payload-120-140",
+          "name": "120–140 kg"
+        },
+        {
+          "value": "payload-140-plus",
+          "name": "140+ kg"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-feature-brand-components",
+      "name": "Komponenter fra kjente merker",
+      "options": [
+        {
+          "value": "feature-brand-components-no",
+          "name": "nei"
+        },
+        {
+          "value": "feature-brand-components-yes",
+          "name": "ja"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-component-tier",
+      "name": "Komponentnivå",
+      "options": [
+        {
+          "value": "entry-components",
+          "name": "Innstegskomponenter"
+        },
+        {
+          "value": "high-components",
+          "name": "Toppklassekomponenter"
+        },
+        {
+          "value": "mid-components",
+          "name": "Mellomklassekomponenter"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-all-features",
+      "name": "Funksjoner",
+      "options": [
+        {
+          "value": "carbon-frame",
+          "name": "Karbonramme"
+        },
+        {
+          "value": "carrier",
+          "name": "Bagasjebrett"
+        },
+        {
+          "value": "feature-brand-backed-components",
+          "name": "Komponenter fra kjente merker"
+        },
+        {
+          "value": "feature-removable-battery-present",
+          "name": "Uttakbart batteri"
+        },
+        {
+          "value": "feature-torque-sensor-natural-pedal-feel",
+          "name": "Momentføler (naturlig tråkkfølelse)"
+        },
+        {
+          "value": "fenders",
+          "name": "Skjermer"
+        },
+        {
+          "value": "full-suspension",
+          "name": "Fulldempet"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-features-manual",
+      "name": "Funksjoner (manuell)",
+      "options": [
+        {
+          "value": "carbon-frame",
+          "name": "Karbonramme"
+        },
+        {
+          "value": "carrier",
+          "name": "Bagasjebrett"
+        },
+        {
+          "value": "fenders",
+          "name": "Skjermer"
+        },
+        {
+          "value": "full-suspension",
+          "name": "Fulldempet"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-feature-torque-sensor",
+      "name": "Momentføler (naturlig tråkkfølelse)",
+      "options": [
+        {
+          "value": "no",
+          "name": "Nei"
+        },
+        {
+          "value": "yes",
+          "name": "Ja"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-frame-type",
+      "name": "Rammetype",
+      "options": [
+        {
+          "value": "high-entry",
+          "name": "Høyt innsteg"
+        },
+        {
+          "value": "low-entry",
+          "name": "Lavt innsteg"
+        },
+        {
+          "value": "medium-high-entry",
+          "name": "Mellomhøyt innsteg"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-intended-use",
+      "name": "Bruksområde / sykkeltype",
+      "options": [
+        {
+          "value": "cargo-longtail",
+          "name": "Lastesykkel / longtail"
+        },
+        {
+          "value": "commuter-urban",
+          "name": "Pendling / by"
+        },
+        {
+          "value": "leisure-cruiser-fatbike",
+          "name": "Fritid / cruiser / fatbike"
+        },
+        {
+          "value": "mountain-emtb",
+          "name": "Terreng / eMTB"
+        },
+        {
+          "value": "touring-trekking",
+          "name": "Tursykling / trekking"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-maintenance-drivetrain",
+      "name": "Vedlikeholdspreferanse",
+      "options": [
+        {
+          "value": "low-maintenance",
+          "name": "Lite vedlikehold"
+        },
+        {
+          "value": "standard-maintenance",
+          "name": "Standard vedlikehold"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-motor-torque-exact-nm",
+      "name": "Motormoment (eksakt)",
+      "options": []
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-motor-torque",
+      "name": "Motormoment",
+      "options": [
+        {
+          "value": "torque-70-80",
+          "name": "70–80 Nm"
+        },
+        {
+          "value": "torque-80-95",
+          "name": "80–95 Nm"
+        },
+        {
+          "value": "torque-95-115",
+          "name": "95–115 Nm"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-optimal-range-exact-km",
+      "name": "Optimal rekkevidde (eksakt)",
+      "options": []
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-rider-height",
+      "name": "Kroppshøyde",
+      "options": [
+        {
+          "value": "large-175-185",
+          "name": "Large (175–185 cm)"
+        },
+        {
+          "value": "medium-165-175",
+          "name": "Medium (165–175 cm)"
+        },
+        {
+          "value": "small-150-165",
+          "name": "Small (150–165 cm)"
+        },
+        {
+          "value": "xlarge-185-plus",
+          "name": "X-Large (185+ cm)"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-rider-height-slided-cm",
+      "name": "Kroppshøyde (glidefelt)",
+      "options": []
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-terrain-capability",
+      "name": "Terrengkapasitet",
+      "options": [
+        {
+          "value": "gravel-mixed",
+          "name": "Grus / variert"
+        },
+        {
+          "value": "trail-mountain",
+          "name": "Sti / terreng"
+        },
+        {
+          "value": "urban-road",
+          "name": "By / landevei"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-height-question-question",
+      "name": "Kroppshøyde",
+      "options": [
+        {
+          "value": "165-175-cm",
+          "name": "165–175 cm"
+        },
+        {
+          "value": "175-185-cm",
+          "name": "175–185 cm"
+        },
+        {
+          "value": "over-185-cm",
+          "name": "Over 185 cm"
+        },
+        {
+          "value": "under-165-cm",
+          "name": "Under 165 cm"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-intended-use-question-question",
+      "name": "Bruksområde",
+      "options": [
+        {
+          "value": "casual-cruiser",
+          "name": "Rolige turer / cruiser"
+        },
+        {
+          "value": "city-commuting",
+          "name": "Pendling i byen"
+        },
+        {
+          "value": "heavy-cargo-family",
+          "name": "Tung last / familie"
+        },
+        {
+          "value": "off-road-trails",
+          "name": "Terreng og stier"
+        },
+        {
+          "value": "touring-long-distance",
+          "name": "Tursykling og langdistanse"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-dealbreakers-question-question",
+      "name": "Må ha",
+      "options": [
+        {
+          "value": "brand-components",
+          "name": "Komponenter fra kjente merker"
+        },
+        {
+          "value": "fenders",
+          "name": "Skjermer"
+        },
+        {
+          "value": "removable-battery",
+          "name": "Uttakbart batteri"
+        },
+        {
+          "value": "torque-sensor",
+          "name": "Momentføler"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-frame-type-question",
+      "name": "Rammetype",
+      "options": [
+        {
+          "value": "high-entry",
+          "name": "Høyt innsteg"
+        },
+        {
+          "value": "low-entry",
+          "name": "Lavt innsteg"
+        },
+        {
+          "value": "medium-high-entry",
+          "name": "Mellomhøyt innsteg"
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-features-manual-question",
+      "name": "Funksjoner",
+      "options": [
+        {
+          "value": "carbon-frame",
+          "name": "Karbonramme"
+        },
+        {
+          "value": "carrier",
+          "name": "Bagasjebrett"
+        },
+        {
+          "value": "fenders",
+          "name": "Skjermer"
+        },
+        {
+          "value": "full-suspension",
+          "name": "Fulldempet"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-rider-height-slided-cm",
+      "name": "Kroppshøyde (glidefelt)",
+      "title": "Skriv inn <H>høyden din</H> for å se bare sykler som passer deg.",
+      "answers": []
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-height-question-question",
+      "name": "Kroppshøyde",
+      "title": "Hvor høy er du?",
+      "answers": [
+        {
+          "code": "under-165-cm",
+          "name": "Under 165 cm",
+          "bucketDefinition": "Sikrer rammestørrelse <strong>Small</strong> (150–165 cm)."
+        },
+        {
+          "code": "165-175-cm",
+          "name": "165–175 cm",
+          "bucketDefinition": "Anbefaler rammestørrelse <strong>Medium</strong> (165–175 cm) for best komfort."
+        },
+        {
+          "code": "175-185-cm",
+          "name": "175–185 cm",
+          "bucketDefinition": "Krever rammestørrelse <strong>Large</strong> (175–185 cm) for riktig passform."
+        },
+        {
+          "code": "over-185-cm",
+          "name": "Over 185 cm",
+          "bucketDefinition": "Betyr at jeg trenger rammestørrelse <strong>X‑Large</strong> (185+ cm)."
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-intended-use-question-question",
+      "name": "Bruksområde",
+      "title": "Hva er hovedformålet med elsykkelen?",
+      "answers": [
+        {
+          "code": "city-commuting",
+          "name": "Pendling i byen",
+          "bucketDefinition": "Gir en <strong>pendlersykkel</strong> optimalisert for bykjøring."
+        },
+        {
+          "code": "heavy-cargo-family",
+          "name": "Tung last / familie",
+          "bucketDefinition": "Gir en <strong>lastesykkel</strong> (longtail) for tung transport."
+        },
+        {
+          "code": "off-road-trails",
+          "name": "Terreng og stier",
+          "bucketDefinition": "Gir en <strong>terrengsykkel</strong> (eMTB) for krevende stier."
+        },
+        {
+          "code": "touring-long-distance",
+          "name": "Tursykling og langdistanse",
+          "bucketDefinition": "Velger en <strong>trekking-/tursykkel</strong> for lange turer."
+        },
+        {
+          "code": "casual-cruiser",
+          "name": "Rolige turer / cruiser",
+          "bucketDefinition": "Gir en <strong>cruiser</strong>/fatbike for avslappede turer."
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-terrain-hills-question-question",
+      "name": "Terreng og bakker",
+      "title": "Hvilket terreng sykler du mest i?",
+      "answers": [
+        {
+          "code": "mostly-flat-roads",
+          "name": "For det meste flate veier",
+          "bucketDefinition": "Prioriterer <strong>70–80 Nm</strong> motormoment for lette, effektive turer på flatmark – uten unødvendig høyt moment."
+        },
+        {
+          "code": "rolling-hills",
+          "name": "Småkupert terreng",
+          "bucketDefinition": "Sikter mot <strong>80–95 Nm</strong> moment for trygg klatring i småkupert terreng, bedre enn oppsett for kun flatmark."
+        },
+        {
+          "code": "steep-hills-heavy-loads",
+          "name": "Bratte bakker / tung last",
+          "bucketDefinition": "Gir <strong>95–115 Nm</strong> moment så du takler bratte bakker og tung last pålitelig."
+        },
+        {
+          "code": "mixed-surfaces-gravel",
+          "name": "Blandet underlag / grus",
+          "bucketDefinition": "Gir <strong>grusklare</strong> terrengegenskaper for røft, variert underlag – ikke bare jevn vei."
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-battery-range-question-question",
+      "name": "Batteri og rekkevidde",
+      "title": "Hvor langt sykler du vanligvis før du lader?",
+      "answers": [
+        {
+          "code": "short-daily-rides-20-40km",
+          "name": "Korte daglige turer (20–40 km)",
+          "bucketDefinition": "Velger et batteri på <strong>400–599 Wh</strong> for kort daglig rekkevidde, ikke langtur."
+        },
+        {
+          "code": "medium-commutes-40-70km",
+          "name": "Middels pendling (40–70 km)",
+          "bucketDefinition": "Velger <strong>600–899 Wh</strong> batteri for middels pendling – god balanse mellom vekt og rekkevidde."
+        },
+        {
+          "code": "long-rides-70-100plus-km",
+          "name": "Lange turer (70–100+ km)",
+          "bucketDefinition": "Velger <strong>900+ Wh</strong> batteri for maksimal rekkevidde på lange turer."
+        },
+        {
+          "code": "multi-day-heavy-use",
+          "name": "Flere dager / hard bruk",
+          "bucketDefinition": "Går for <strong>900+ Wh</strong> batteri for å tåle flerdagers og hard bruk."
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-cargo-capacity-question-question",
+      "name": "Behov for last",
+      "title": "Hva pleier du å frakte?",
+      "answers": [
+        {
+          "code": "light-loads-groceries",
+          "name": "Bare meg selv",
+          "bucketDefinition": "Støtter <strong>100 kg</strong> nyttelast. Holder når last ikke er viktig."
+        },
+        {
+          "code": "kids-regular-loads",
+          "name": "Vanlig last",
+          "bucketDefinition": "Gir <strong>120–140 kg</strong> nyttelast til daglige ærend og matvarer."
+        },
+        {
+          "code": "heavy-commercial-loads",
+          "name": "Barn / tung last",
+          "bucketDefinition": "Sikrer <strong>140+ kg</strong> nyttelast og økt <strong>95–115 Nm</strong> moment så du kan frakte barn og tung last."
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-performance-intensity-question-question",
+      "name": "Ytelsesnivå",
+      "title": "Hvor hardt kommer du til å sykle?",
+      "answers": [
+        {
+          "code": "casual-weekend-rides",
+          "name": "Pendling / rolige turer",
+          "bucketDefinition": "Velger <strong>innstegskomponenter</strong> til pendling – rimelig og enkelt."
+        },
+        {
+          "code": "regular-enthusiast",
+          "name": "Aktiv mosjonist",
+          "bucketDefinition": "Velger <strong>Mellomklassekomponenter</strong> for god balanse mellom ytelse og pris til avslappet helgesykling."
+        },
+        {
+          "code": "serious-competitive",
+          "name": "Seriøs / konkurranse",
+          "bucketDefinition": "Krever <strong>toppklassekomponenter</strong> og <strong>95–115 Nm</strong> moment for ytelse på konkurransenivå."
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-ownership-priority-question-question",
+      "name": "Prioritet ved eierskap",
+      "title": "Hva er viktigst på sikt?",
+      "answers": [
+        {
+          "code": "maximum-reliability",
+          "name": "Maksimal driftssikkerhet",
+          "bucketDefinition": "Prioriterer <strong>komponenter fra kjente merker</strong> – utprøvde deler og maksimal driftssikkerhet."
+        },
+        {
+          "code": "easy-service-access",
+          "name": "Enkel service",
+          "bucketDefinition": "Foretrekker <strong>komponenter fra kjente merker</strong> slik at lokale verksteder enkelt kan gi service og støtte."
+        },
+        {
+          "code": "low-running-costs",
+          "name": "Lave driftskostnader",
+          "bucketDefinition": "Velger <strong>lite vedlikehold</strong> i drivverk for å redusere kostnader og styr over tid."
+        },
+        {
+          "code": "performance-first",
+          "name": "Ytelse først",
+          "bucketDefinition": "Prioriterer <strong>toppklassekomponenter</strong> og <strong>95–115 Nm</strong> moment for topp ytelse."
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-frame-type",
+      "name": "Rammetype",
+      "title": "Hvilken rammetype ønsker du?",
+      "answers": [
+        {
+          "code": "high-entry",
+          "name": "Høyt innsteg",
+          "bucketDefinition": "Høyt innsteg gir maksimal rammestivhet og et klassisk uttrykk – ofte foretrukket til sporty sykling, terreng og landevei."
+        },
+        {
+          "code": "low-entry",
+          "name": "Lavt innsteg",
+          "bucketDefinition": "Lavt innsteg prioriterer enkel av- og påstigning og maksimal tilgjengelighet – typisk på pendler- og bysykler."
+        },
+        {
+          "code": "medium-high-entry",
+          "name": "Mellomhøyt innsteg",
+          "bucketDefinition": "Mellomhøyt innsteg balanserer stabilitet og god tilgjengelighet – passer til allsidig bruk, ofte på tur- og hybridsykler."
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-dealbreakers-question-question",
+      "name": "Må ha",
+      "title": "Noen funksjoner du må ha?",
+      "answers": [
+        {
+          "code": "fenders",
+          "name": "Skjermer",
+          "bucketDefinition": ""
+        },
+        {
+          "code": "torque-sensor",
+          "name": "Momentføler",
+          "bucketDefinition": "Gir <strong>momentføler</strong> for naturlig tråkkfølelse."
+        },
+        {
+          "code": "removable-battery",
+          "name": "Uttakbart batteri",
+          "bucketDefinition": "Gir <strong>uttakbart batteri</strong> for enkel lading."
+        },
+        {
+          "code": "brand-components",
+          "name": "Komponenter fra kjente merker",
+          "bucketDefinition": "Prioriterer sykler med <strong>komponenter fra kjente merker</strong> for pålitelighet."
+        }
+      ]
+    },
+    {
+      "code": "e-wheels-new-electric-bikes-2025-10-02-160158-features-manual",
+      "name": "Funksjoner",
+      "title": "Noen funksjoner du må ha?",
+      "answers": [
+        {
+          "code": "carbon-frame",
+          "name": "Karbonramme",
+          "bucketDefinition": ""
+        },
+        {
+          "code": "carrier",
+          "name": "Bagasjebrett",
+          "bucketDefinition": ""
+        },
+        {
+          "code": "fenders",
+          "name": "Skjermer",
+          "bucketDefinition": ""
+        },
+        {
+          "code": "full-suspension",
+          "name": "Fulldempet",
+          "bucketDefinition": ""
+        }
+      ]
+    }
+  ]
+};
+
+    // English translations for reference only (not exported)
+    const englishRef = {
+      "e-wheels-new-electric-bikes-2025-10-02-160158-rider-height-slided-cm": {
+        title: "Enter your height to see only bikes that will fit you.",
+        answers: {}
+      },
+      "e-wheels-new-electric-bikes-2025-10-02-160158-height-question-question": {
+        title: "How tall are you?",
+        answers: {
+          "under-165-cm": { name: "Under 165 cm", bucket: "Ensures frame size Small (150-165 cm)." },
+          "165-175-cm": { name: "165-175 cm", bucket: "Recommends frame size Medium (165-175 cm)." },
+          "175-185-cm": { name: "175-185 cm", bucket: "Requires frame size Large (175-185 cm)." },
+          "over-185-cm": { name: "Over 185 cm", bucket: "Means X-Large frame size (185+ cm)." }
+        }
+      },
+      "e-wheels-new-electric-bikes-2025-10-02-160158-intended-use-question-question": {
+        title: "What's your main reason for getting an e-bike?",
+        answers: {
+          "city-commuting": { name: "City commuting", bucket: "Gives a Commuter bike optimized for city travel." },
+          "heavy-cargo-family": { name: "Heavy cargo / family", bucket: "Provides a Cargo longtail bike." },
+          "off-road-trails": { name: "Off-road & trails", bucket: "Gives a Mountain eMTB for rough trails." },
+          "touring-long-distance": { name: "Touring & long-distance", bucket: "Selects a Trekking touring e-bike." },
+          "casual-cruiser": { name: "Casual / cruiser", bucket: "Gives a Cruiser/fatbike for relaxed rides." }
+        }
+      },
+      "e-wheels-new-electric-bikes-2025-10-02-160158-terrain-hills-question-question": {
+        title: "What kind of terrain will you ride most?",
+        answers: {
+          "mostly-flat-roads": { name: "Mostly flat roads", bucket: "Prioritizes 70-80 Nm motor torque." },
+          "rolling-hills": { name: "Rolling hills", bucket: "Targets 80-95 Nm torque." },
+          "steep-hills-heavy-loads": { name: "Steep hills / heavy loads", bucket: "Delivers 95-115 Nm torque." },
+          "mixed-surfaces-gravel": { name: "Mixed surfaces / gravel", bucket: "Gives gravel-ready terrain capability." }
+        }
+      },
+      "e-wheels-new-electric-bikes-2025-10-02-160158-battery-range-question-question": {
+        title: "How far will you typically ride before recharging?",
+        answers: {
+          "short-daily-rides-20-40km": { name: "Short daily rides (20-40 km)", bucket: "Chooses 400-599 Wh battery." },
+          "medium-commutes-40-70km": { name: "Medium commutes (40-70 km)", bucket: "Selects 600-899 Wh battery." },
+          "long-rides-70-100plus-km": { name: "Long rides (70-100+ km)", bucket: "Picks 900+ Wh battery." },
+          "multi-day-heavy-use": { name: "Multi-day / heavy use", bucket: "Opts for 900+ Wh battery." }
+        }
+      },
+      "e-wheels-new-electric-bikes-2025-10-02-160158-cargo-capacity-question-question": {
+        title: "What will you typically carry?",
+        answers: {
+          "light-loads-groceries": { name: "Only myself", bucket: "Supports 100 kg payload." },
+          "kids-regular-loads": { name: "Regular loads", bucket: "Provides 120-140 kg payload." },
+          "heavy-commercial-loads": { name: "Kids / heavy loads", bucket: "Ensures 140+ kg payload." }
+        }
+      },
+      "e-wheels-new-electric-bikes-2025-10-02-160158-performance-intensity-question-question": {
+        title: "How intensely will you ride?",
+        answers: {
+          "casual-weekend-rides": { name: "Commuting / casual rides", bucket: "Entry-level components." },
+          "regular-enthusiast": { name: "Regular enthusiast", bucket: "Mid-level components." },
+          "serious-competitive": { name: "Serious / competitive", bucket: "High-end components." }
+        }
+      },
+      "e-wheels-new-electric-bikes-2025-10-02-160158-ownership-priority-question-question": {
+        title: "What matters most long-term?",
+        answers: {
+          "maximum-reliability": { name: "Maximum reliability", bucket: "Prioritizes brand-backed components." },
+          "easy-service-access": { name: "Easy service access", bucket: "Prefers brand components for easy service." },
+          "low-running-costs": { name: "Low running costs", bucket: "Low-maintenance drivetrain." },
+          "performance-first": { name: "Performance first", bucket: "High-end components." }
+        }
+      },
+      "e-wheels-new-electric-bikes-2025-10-02-160158-frame-type": {
+        title: "Which frame type do you prefer?",
+        answers: {
+          "high-entry": { name: "High entry", bucket: "Maximum frame stiffness, classic look." },
+          "low-entry": { name: "Low entry", bucket: "Easy mounting and dismounting." },
+          "medium-high-entry": { name: "Medium-high entry", bucket: "Balances stability and accessibility." }
+        }
+      },
+      "e-wheels-new-electric-bikes-2025-10-02-160158-dealbreakers-question-question": {
+        title: "Any features you must have?",
+        answers: {
+          "fenders": { name: "Fenders", bucket: "" },
+          "torque-sensor": { name: "Torque sensor", bucket: "Natural pedal feel." },
+          "removable-battery": { name: "Removable battery", bucket: "Easy charging." },
+          "brand-components": { name: "Brand components", bucket: "Prioritizes brand-backed components." }
+        }
+      },
+      "e-wheels-new-electric-bikes-2025-10-02-160158-features-manual": {
+        title: "Any features you must have?",
+        answers: {
+          "carbon-frame": { name: "Carbon frame", bucket: "" },
+          "carrier": { name: "Carrier", bucket: "" },
+          "fenders": { name: "Fenders", bucket: "" },
+          "full-suspension": { name: "Full suspension", bucket: "" }
+        }
+      }
     };
 
     // Icons as SVG
@@ -222,12 +856,8 @@
       };
 
       const handleKeyDown = (e) => {
-        if (e.key === 'Enter' && !multiline) {
-          handleSave();
-        }
-        if (e.key === 'Escape') {
-          handleCancel();
-        }
+        if (e.key === 'Enter' && !multiline) handleSave();
+        if (e.key === 'Escape') handleCancel();
       };
 
       if (isEditing) {
@@ -252,73 +882,61 @@
                 autoFocus
               />
             )}
-            <button onClick={handleSave} className="p-2 text-green-600 hover:bg-green-100 rounded transition-colors">
-              <Check size={18} />
-            </button>
-            <button onClick={handleCancel} className="p-2 text-red-600 hover:bg-red-100 rounded transition-colors">
-              <X size={18} />
-            </button>
+            <button onClick={handleSave} className="p-2 text-green-600 hover:bg-green-100 rounded"><Check size={18} /></button>
+            <button onClick={handleCancel} className="p-2 text-red-600 hover:bg-red-100 rounded"><X size={18} /></button>
           </div>
         );
       }
 
       return (
-        <div 
-          className="group flex items-center gap-2 cursor-pointer hover:bg-black/5 rounded p-1 -m-1 transition-colors"
-          onClick={() => setIsEditing(true)}
-        >
+        <div className="group flex items-center gap-2 cursor-pointer hover:bg-black/5 rounded p-1 -m-1" onClick={() => setIsEditing(true)}>
           <span className={value ? "" : "text-gray-400 italic"}>{value || placeholder}</span>
-          <span className="opacity-0 group-hover:opacity-100 transition-opacity">
-            <Edit2 size={14} />
-          </span>
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity"><Edit2 size={14} /></span>
         </div>
       );
     };
 
-    const AnswerCard = ({ answer, onUpdate, showEN }) => {
+    const AnswerCard = ({ answer, onUpdate, showEN, questionCode }) => {
+      const enRef = englishRef[questionCode]?.answers?.[answer.code];
+      
       return (
         <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all">
-          <div className="flex justify-between items-start mb-2">
-            <div className="flex-1">
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs text-gray-400 font-mono bg-gray-100 px-2 py-0.5 rounded">{answer.id}</span>
-              </div>
-              <div className="font-medium text-gray-800">
-                <EditableField 
-                  value={answer.name} 
-                  onSave={(val) => onUpdate({ ...answer, name: val })}
-                  placeholder="Answer name..."
-                />
-              </div>
-              {showEN && answer.nameEN && (
-                <div className="text-xs text-green-700 mt-1 bg-green-50 inline-block px-2 py-0.5 rounded">EN: {answer.nameEN}</div>
-              )}
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xs text-gray-400 font-mono bg-gray-100 px-2 py-0.5 rounded">{answer.code}</span>
             </div>
+            <div className="font-medium text-gray-800">
+              <EditableField 
+                value={answer.name} 
+                onSave={(val) => onUpdate({ ...answer, name: val })}
+                placeholder="Answer name..."
+              />
+            </div>
+            {showEN && enRef?.name && (
+              <div className="text-xs text-green-700 mt-1 bg-green-50 inline-block px-2 py-0.5 rounded">EN: {enRef.name}</div>
+            )}
           </div>
           
-          {(answer.bucketDefinition || answer.bucketDefinitionEN) && (
-            <div className="mt-3 pt-3 border-t border-gray-100">
-              <div className="text-sm text-gray-600">
-                <EditableField 
-                  value={answer.bucketDefinition} 
-                  onSave={(val) => onUpdate({ ...answer, bucketDefinition: val })}
-                  placeholder="Bucket definition..."
-                  multiline
-                />
-              </div>
-              {showEN && answer.bucketDefinitionEN && (
-                <div className="text-xs text-green-700 mt-2 bg-green-50 p-2 rounded">
-                  EN: {answer.bucketDefinitionEN}
-                </div>
-              )}
+          <div className="mt-3 pt-3 border-t border-gray-100">
+            <div className="text-sm text-gray-600">
+              <EditableField 
+                value={answer.bucketDefinition} 
+                onSave={(val) => onUpdate({ ...answer, bucketDefinition: val })}
+                placeholder="Bucket definition..."
+                multiline
+              />
             </div>
-          )}
+            {showEN && enRef?.bucket && (
+              <div className="text-xs text-green-700 mt-2 bg-green-50 p-2 rounded">EN: {enRef.bucket}</div>
+            )}
+          </div>
         </div>
       );
     };
 
     const QuestionCard = ({ question, onUpdate, showEN }) => {
       const [isExpanded, setIsExpanded] = useState(true);
+      const enRef = englishRef[question.code];
 
       const updateAnswer = (index, updatedAnswer) => {
         const newAnswers = [...question.answers];
@@ -326,22 +944,15 @@
         onUpdate({ ...question, answers: newAnswers });
       };
 
+      const shortCode = question.code.replace('e-wheels-new-electric-bikes-2025-10-02-160158-', '');
+
       return (
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-6">
-          {/* Question Header */}
           <div className="bg-blue-600 text-white p-4">
             <div className="flex items-center justify-between">
               <div className="flex-1">
-                <div className="flex items-center gap-2 mb-2 flex-wrap">
-                  <span className="text-xs bg-white/20 px-2 py-0.5 rounded font-mono">{question.id}</span>
-                  <span className={`text-xs px-2 py-0.5 rounded font-semibold ${
-                    question.type === 'filtering' ? 'bg-yellow-400 text-yellow-900' : 'bg-purple-400 text-purple-900'
-                  }`}>
-                    {question.type}
-                  </span>
-                  <span className="text-xs bg-white/20 px-2 py-0.5 rounded">
-                    {question.questionType}
-                  </span>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs bg-white/20 px-2 py-0.5 rounded font-mono">{shortCode}</span>
                 </div>
                 <div className="text-lg font-semibold">
                   <EditableField 
@@ -350,20 +961,16 @@
                     placeholder="Question title..."
                   />
                 </div>
-                {showEN && question.titleEN && (
-                  <div className="text-sm text-blue-200 mt-1">EN: {question.titleEN}</div>
+                {showEN && enRef?.title && (
+                  <div className="text-sm text-blue-200 mt-1">EN: {enRef.title}</div>
                 )}
               </div>
-              <button 
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="p-2 hover:bg-white/10 rounded-lg transition-colors ml-4"
-              >
+              <button onClick={() => setIsExpanded(!isExpanded)} className="p-2 hover:bg-white/10 rounded-lg ml-4">
                 {isExpanded ? <ChevronUp /> : <ChevronDown />}
               </button>
             </div>
           </div>
 
-          {/* Answers */}
           {isExpanded && (
             <div className="p-4 bg-gray-50">
               {question.answers.length === 0 ? (
@@ -374,10 +981,11 @@
                 <div className="grid gap-3">
                   {question.answers.map((answer, idx) => (
                     <AnswerCard 
-                      key={answer.id} 
+                      key={answer.code} 
                       answer={answer} 
                       onUpdate={(updated) => updateAnswer(idx, updated)}
                       showEN={showEN}
+                      questionCode={question.code}
                     />
                   ))}
                 </div>
@@ -400,26 +1008,17 @@
       };
 
       const exportJSON = () => {
+        // Export EXACT same structure as input
         const exportData = {
-          questions: data.questions.map(q => ({
-            id: q.id,
-            name: q.name,
-            title: q.title,
-            type: q.type,
-            questionType: q.questionType,
-            answers: q.answers.map(a => ({
-              id: a.id,
-              name: a.name,
-              bucketDefinition: a.bucketDefinition
-            }))
-          }))
+          parameters: data.parameters,
+          questions: data.questions
         };
         
         const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'questions_edited.json';
+        a.download = 'e-wheels-questions-edited.json';
         a.click();
         URL.revokeObjectURL(url);
       };
@@ -432,25 +1031,24 @@
 
       return (
         <div className="min-h-screen bg-gray-100">
-          {/* Header */}
           <div className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
             <div className="max-w-5xl mx-auto px-4 py-4">
               <div className="flex items-center justify-between mb-4 flex-wrap gap-4">
-                <h1 className="text-2xl font-bold text-gray-800">🚴 E-Bike Questions Editor</h1>
+                <div>
+                  <h1 className="text-2xl font-bold text-gray-800">🚴 E-Bike Questions Editor test</h1>
+                  <p className="text-sm text-gray-500 mt-1">Edit questions • Parameters preserved • Export = same format as input</p>
+                </div>
                 <div className="flex items-center gap-4 flex-wrap">
                   <label className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer">
                     <input 
                       type="checkbox" 
                       checked={showEN} 
                       onChange={(e) => setShowEN(e.target.checked)}
-                      className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                      className="rounded"
                     />
-                    Show English reference
+                    Show English
                   </label>
-                  <button 
-                    onClick={exportJSON}
-                    className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                  >
+                  <button onClick={exportJSON} className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-medium">
                     <Download size={18} />
                     Export JSON
                   </button>
@@ -462,31 +1060,21 @@
                 placeholder="🔍 Search questions or answers..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           </div>
 
-          {/* Questions List */}
           <div className="max-w-5xl mx-auto px-4 py-6">
-            <div className="text-sm text-gray-500 mb-4 flex items-center gap-2">
-              <span className="font-medium">{filteredQuestions.length} questions</span>
-              <span>•</span>
-              <span>Click any text to edit</span>
-              <span>•</span>
-              <span className="inline-flex items-center gap-1">
-                <span className="w-3 h-3 rounded bg-yellow-400"></span> filtering
-              </span>
-              <span className="inline-flex items-center gap-1">
-                <span className="w-3 h-3 rounded bg-purple-400"></span> profiling
-              </span>
+            <div className="text-sm text-gray-500 mb-4">
+              {filteredQuestions.length} questions • {data.parameters.length} parameters (preserved) • Click text to edit
             </div>
             
             {filteredQuestions.map((question, idx) => (
               <QuestionCard 
-                key={question.id}
+                key={question.code}
                 question={question}
-                onUpdate={(updated) => updateQuestion(data.questions.indexOf(question), updated)}
+                onUpdate={(updated) => updateQuestion(data.questions.findIndex(q => q.code === question.code), updated)}
                 showEN={showEN}
               />
             ))}
