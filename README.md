@@ -4,7 +4,7 @@ A lightweight, browser-based JSON editor designed specifically for managing e-bi
 
 ---
 
-## ### Key Features
+## Key Features
 
 * **Drag-and-Drop Upload:** Quickly load your `.json` configuration files.
 * **In-Place Editing:** Click any text field (titles, names, or bucket definitions) to edit instantly.
@@ -15,7 +15,7 @@ A lightweight, browser-based JSON editor designed specifically for managing e-bi
 
 ---
 
-## ### Getting Started
+## Getting Started
 
 ### 1. Requirements
 
@@ -35,7 +35,7 @@ Since this is a standalone HTML file using CDN-delivered React and Tailwind CSS,
 
 ---
 
-## ### Expected JSON Structure
+## Expected JSON Structure
 
 The editor expects a JSON format similar to the following:
 
@@ -61,7 +61,7 @@ The editor expects a JSON format similar to the following:
 
 ---
 
-## ### Technical Stack
+## Technical Stack
 
 * **React 18:** Functional components and hooks for state management.
 * **Tailwind CSS:** For a clean, responsive, and "app-like" UI.
@@ -69,5 +69,3 @@ The editor expects a JSON format similar to the following:
 * **Lucide-inspired SVGs:** Lightweight iconography for navigation.
 
 > **Note:** This tool runs entirely client-side. Your data never leaves your browser and is not uploaded to any server.
-
-Would you like me to add instructions on how to extend the editor for new data fields?
