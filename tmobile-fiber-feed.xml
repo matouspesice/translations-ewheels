@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>T-Mobile CZ — Household Connectivity</title>
+    <link>https://www.t-mobile.cz</link>
+    <description>T-Mobile Czech Republic home internet plans — Fiber (FTTH), xDSL, and Fixed Wireless (5G)</description>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         FIBER (FTTH) PLANS — 4 products
+         Symmetric, dedicated line, latency < 5ms, Wi-Fi 6 router included
+         ═══════════════════════════════════════════════════════════════ -->
+
+    <item>
+      <g:id>tmobile-cz-fiber-250</g:id>
+      <g:title>T-Mobile Internet 250 Mb/s — Optický internet (FTTH)</g:title>
+      <g:description>Symetrický optický internet 250/250 Mb/s. FTTH technologie, neomezená data, Wi-Fi 6 router v ceně, profesionální instalace zdarma. Ideální pro jednotlivce, páry a menší domácnosti. Latence pod 5 ms.</g:description>
+      <g:link>https://eshop.t-mobile.cz/tarify/internet</g:link>
+      <g:image_link>https://www.t-mobile.cz/images/internet-250.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>399 CZK</g:price>
+      <g:sale_price>299 CZK</g:sale_price>
+      <g:sale_price_effective_date>2025-01-01T00:00:00+01:00/2026-12-31T23:59:59+01:00</g:sale_price_effective_date>
+      <g:brand>T-Mobile</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Electronics &gt; Communications &gt; Telephony &gt; Communication Service Providers</g:google_product_category>
+      <g:product_type>Internet &gt; Fixed-line broadband &gt; Fiber (FTTH) &gt; Residential</g:product_type>
+      <g:identifier_exists>false</g:identifier_exists>
+      <g:custom_label_0>fiber</g:custom_label_0>
+      <g:custom_label_1>entry-tier</g:custom_label_1>
+      <g:custom_label_2>symmetric</g:custom_label_2>
+      <g:custom_label_3>ftth</g:custom_label_3>
+      <g:custom_label_4>promo-299</g:custom_label_4>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Download</g:attribute_name>
+        <g:attribute_value>250 Mb/s</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Upload</g:attribute_name>
+        <g:attribute_value>250 Mb/s</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Symetrie</g:attribute_name>
+        <g:attribute_value>Symetrický (upload = download)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Latence</g:attribute_name>
+        <g:attribute_value>Pod 5 ms</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Typ připojení</g:attribute_name>
+        <g:attribute_value>FTTH (Fiber to the Home) — optika až do bytu</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Wi-Fi router</g:attribute_name>
+        <g:attribute_value>Wi-Fi 6, pronájem v ceně tarifu</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Datový limit</g:attribute_name>
+        <g:attribute_value>Neomezená data, bez FUP</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Akční cena (6 měsíců)</g:attribute_name>
+        <g:attribute_value>299 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Běžná cena</g:attribute_name>
+        <g:attribute_value>399 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Instalace</g:attribute_name>
+        <g:attribute_value>Zdarma (profesionální technik)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Smlouva</g:section_name>
+        <g:attribute_name>Závazek</g:attribute_name>
+        <g:attribute_value>24 měsíců</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>Doporučený profil</g:attribute_name>
+        <g:attribute_value>Jednotlivci, páry, lehké prohlížení a streaming</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>Počet zařízení</g:attribute_name>
+        <g:attribute_value>1–5 současně</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>4K streaming</g:attribute_name>
+        <g:attribute_value>Až 2 současné 4K streamy</g:attribute_value>
+      </g:product_detail>
+    </item>
+
+    <item>
+      <g:id>tmobile-cz-fiber-500</g:id>
+      <g:title>T-Mobile Internet 500 Mb/s — Optický internet (FTTH)</g:title>
+      <g:description>Symetrický optický internet 500/500 Mb/s. FTTH technologie, neomezená data, Wi-Fi 6 router v ceně, profesionální instalace zdarma. Ideální pro menší rodiny, HD/4K streaming na více zařízeních, videohovory a práci z domova.</g:description>
+      <g:link>https://eshop.t-mobile.cz/tarify/internet</g:link>
+      <g:image_link>https://www.t-mobile.cz/images/internet-500.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>499 CZK</g:price>
+      <g:sale_price>299 CZK</g:sale_price>
+      <g:sale_price_effective_date>2025-01-01T00:00:00+01:00/2026-12-31T23:59:59+01:00</g:sale_price_effective_date>
+      <g:brand>T-Mobile</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Electronics &gt; Communications &gt; Telephony &gt; Communication Service Providers</g:google_product_category>
+      <g:product_type>Internet &gt; Fixed-line broadband &gt; Fiber (FTTH) &gt; Residential</g:product_type>
+      <g:identifier_exists>false</g:identifier_exists>
+      <g:custom_label_0>fiber</g:custom_label_0>
+      <g:custom_label_1>mid-tier</g:custom_label_1>
+      <g:custom_label_2>symmetric</g:custom_label_2>
+      <g:custom_label_3>ftth</g:custom_label_3>
+      <g:custom_label_4>promo-299</g:custom_label_4>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Download</g:attribute_name>
+        <g:attribute_value>500 Mb/s</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Upload</g:attribute_name>
+        <g:attribute_value>500 Mb/s</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Symetrie</g:attribute_name>
+        <g:attribute_value>Symetrický (upload = download)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Latence</g:attribute_name>
+        <g:attribute_value>Pod 5 ms</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Typ připojení</g:attribute_name>
+        <g:attribute_value>FTTH (Fiber to the Home) — optika až do bytu</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Wi-Fi router</g:attribute_name>
+        <g:attribute_value>Wi-Fi 6, pronájem v ceně tarifu</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Datový limit</g:attribute_name>
+        <g:attribute_value>Neomezená data, bez FUP</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Akční cena (6 měsíců)</g:attribute_name>
+        <g:attribute_value>299 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Běžná cena</g:attribute_name>
+        <g:attribute_value>499 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Instalace</g:attribute_name>
+        <g:attribute_value>Zdarma (profesionální technik)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Smlouva</g:section_name>
+        <g:attribute_name>Závazek</g:attribute_name>
+        <g:attribute_value>24 měsíců</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>Doporučený profil</g:attribute_name>
+        <g:attribute_value>Menší rodiny, HD/4K streaming, práce z domova</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>Počet zařízení</g:attribute_name>
+        <g:attribute_value>5–10 současně</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>4K streaming</g:attribute_name>
+        <g:attribute_value>Až 4 současné 4K streamy</g:attribute_value>
+      </g:product_detail>
+    </item>
+
+    <item>
+      <g:id>tmobile-cz-fiber-1000</g:id>
+      <g:title>T-Mobile Internet 1000 Mb/s — Optický internet (FTTH)</g:title>
+      <g:description>Symetrický optický internet 1000/1000 Mb/s (1 Gbit/s). FTTH technologie, neomezená data, Wi-Fi 6 router v ceně, profesionální instalace zdarma. Doporučený tarif. Ideální pro větší rodiny 4+, současnou práci z domova a streaming, tvůrce obsahu.</g:description>
+      <g:link>https://eshop.t-mobile.cz/tarify/internet</g:link>
+      <g:image_link>https://www.t-mobile.cz/images/internet-1000.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>599 CZK</g:price>
+      <g:sale_price>299 CZK</g:sale_price>
+      <g:sale_price_effective_date>2025-01-01T00:00:00+01:00/2026-12-31T23:59:59+01:00</g:sale_price_effective_date>
+      <g:brand>T-Mobile</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Electronics &gt; Communications &gt; Telephony &gt; Communication Service Providers</g:google_product_category>
+      <g:product_type>Internet &gt; Fixed-line broadband &gt; Fiber (FTTH) &gt; Residential</g:product_type>
+      <g:identifier_exists>false</g:identifier_exists>
+      <g:custom_label_0>fiber</g:custom_label_0>
+      <g:custom_label_1>high-tier</g:custom_label_1>
+      <g:custom_label_2>symmetric</g:custom_label_2>
+      <g:custom_label_3>ftth</g:custom_label_3>
+      <g:custom_label_4>promo-299</g:custom_label_4>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Download</g:attribute_name>
+        <g:attribute_value>1000 Mb/s (1 Gbit/s)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Upload</g:attribute_name>
+        <g:attribute_value>1000 Mb/s (1 Gbit/s)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Symetrie</g:attribute_name>
+        <g:attribute_value>Symetrický (upload = download)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Latence</g:attribute_name>
+        <g:attribute_value>Pod 5 ms</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Typ připojení</g:attribute_name>
+        <g:attribute_value>FTTH (Fiber to the Home) — optika až do bytu</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Wi-Fi router</g:attribute_name>
+        <g:attribute_value>Wi-Fi 6, pronájem v ceně tarifu</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Datový limit</g:attribute_name>
+        <g:attribute_value>Neomezená data, bez FUP</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Akční cena (6 měsíců)</g:attribute_name>
+        <g:attribute_value>299 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Běžná cena</g:attribute_name>
+        <g:attribute_value>599 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Instalace</g:attribute_name>
+        <g:attribute_value>Zdarma (profesionální technik)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Smlouva</g:section_name>
+        <g:attribute_name>Závazek</g:attribute_name>
+        <g:attribute_value>24 měsíců</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>Doporučený profil</g:attribute_name>
+        <g:attribute_value>Větší rodiny 4+, práce z domova + streaming, tvůrci obsahu</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>Počet zařízení</g:attribute_name>
+        <g:attribute_value>10–20 současně</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>4K streaming</g:attribute_name>
+        <g:attribute_value>6+ současných 4K streamů</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Poznámka</g:section_name>
+        <g:attribute_name>Doporučení T-Mobile</g:attribute_name>
+        <g:attribute_value>Doporučený tarif (DOPORUČUJEME)</g:attribute_value>
+      </g:product_detail>
+    </item>
+
+    <item>
+      <g:id>tmobile-cz-fiber-2000</g:id>
+      <g:title>T-Mobile Internet 2000 Mb/s — Optický internet (FTTH)</g:title>
+      <g:description>Optický internet 2000/1000 Mb/s (2 Gbit/s download). FTTH technologie, neomezená data, Wi-Fi 6 router v ceně, profesionální instalace zdarma. Pro power uživatele, domácí servery, NAS. Pozor: upload je asymetrický (1000 Mb/s). Vyžaduje Cat6/Cat6A kabeláž.</g:description>
+      <g:link>https://eshop.t-mobile.cz/tarify/internet</g:link>
+      <g:image_link>https://www.t-mobile.cz/images/internet-2000.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>699 CZK</g:price>
+      <g:sale_price>299 CZK</g:sale_price>
+      <g:sale_price_effective_date>2025-01-01T00:00:00+01:00/2026-12-31T23:59:59+01:00</g:sale_price_effective_date>
+      <g:brand>T-Mobile</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Electronics &gt; Communications &gt; Telephony &gt; Communication Service Providers</g:google_product_category>
+      <g:product_type>Internet &gt; Fixed-line broadband &gt; Fiber (FTTH) &gt; Residential</g:product_type>
+      <g:identifier_exists>false</g:identifier_exists>
+      <g:custom_label_0>fiber</g:custom_label_0>
+      <g:custom_label_1>premium-tier</g:custom_label_1>
+      <g:custom_label_2>asymmetric</g:custom_label_2>
+      <g:custom_label_3>ftth</g:custom_label_3>
+      <g:custom_label_4>promo-299</g:custom_label_4>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Download</g:attribute_name>
+        <g:attribute_value>2000 Mb/s (2 Gbit/s)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Upload</g:attribute_name>
+        <g:attribute_value>1000 Mb/s (1 Gbit/s)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Symetrie</g:attribute_name>
+        <g:attribute_value>Asymetrický (upload 1000, download 2000)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Latence</g:attribute_name>
+        <g:attribute_value>Pod 5 ms</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Typ připojení</g:attribute_name>
+        <g:attribute_value>FTTH (Fiber to the Home) — optika až do bytu</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Wi-Fi router</g:attribute_name>
+        <g:attribute_value>Wi-Fi 6, pronájem v ceně tarifu</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Datový limit</g:attribute_name>
+        <g:attribute_value>Neomezená data, bez FUP</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Multi-gig</g:attribute_name>
+        <g:attribute_value>Ano — vyžaduje Cat6/Cat6A kabeláž a multi-gig síťovou kartu</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Akční cena (6 měsíců)</g:attribute_name>
+        <g:attribute_value>299 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Běžná cena</g:attribute_name>
+        <g:attribute_value>699 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Instalace</g:attribute_name>
+        <g:attribute_value>Zdarma (profesionální technik)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Smlouva</g:section_name>
+        <g:attribute_name>Závazek</g:attribute_name>
+        <g:attribute_value>24 měsíců</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>Doporučený profil</g:attribute_name>
+        <g:attribute_value>Power uživatelé, domácí servery, NAS, multi-gig LAN</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>Počet zařízení</g:attribute_name>
+        <g:attribute_value>20+ současně</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Důležité upozornění</g:section_name>
+        <g:attribute_name>Upload asymetrie</g:attribute_name>
+        <g:attribute_value>Jediný tarif kde upload (1000) ≠ download (2000)</g:attribute_value>
+      </g:product_detail>
+    </item>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         xDSL (VDSL) PLANS — 1 confirmed active product
+         Copper last mile, asymmetric upload, modem rental +50 Kč/mo
+         ═══════════════════════════════════════════════════════════════ -->
+
+    <item>
+      <g:id>tmobile-cz-xdsl-50</g:id>
+      <g:title>T-Mobile Pevný internet 50 Mb/s — xDSL internet</g:title>
+      <g:description>Pevné xDSL internetové připojení 50/5 Mb/s. Spolehlivé kabelové připojení s neomezenými daty. Ideální tam, kde není dostupná optika. Instalace a aktivace zdarma, bez závazku. Pronájem DSL modemu 50 Kč/měsíc navíc.</g:description>
+      <g:link>https://www.t-mobile.cz/xdsl-internet</g:link>
+      <g:image_link>https://www.t-mobile.cz/images/pevny-internet-50.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>549 CZK</g:price>
+      <g:sale_price>299 CZK</g:sale_price>
+      <g:sale_price_effective_date>2025-01-01T00:00:00+01:00/2026-04-30T23:59:59+01:00</g:sale_price_effective_date>
+      <g:brand>T-Mobile</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Electronics &gt; Communications &gt; Telephony &gt; Communication Service Providers</g:google_product_category>
+      <g:product_type>Internet &gt; Fixed-line broadband &gt; xDSL (VDSL) &gt; Residential</g:product_type>
+      <g:identifier_exists>false</g:identifier_exists>
+      <g:custom_label_0>xdsl</g:custom_label_0>
+      <g:custom_label_1>entry-tier</g:custom_label_1>
+      <g:custom_label_2>asymmetric</g:custom_label_2>
+      <g:custom_label_3>vdsl</g:custom_label_3>
+      <g:custom_label_4>promo-299</g:custom_label_4>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Download</g:attribute_name>
+        <g:attribute_value>50 Mb/s</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Upload</g:attribute_name>
+        <g:attribute_value>5 Mb/s</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Symetrie</g:attribute_name>
+        <g:attribute_value>Asymetrický (upload výrazně nižší)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Latence</g:attribute_name>
+        <g:attribute_value>15–40 ms (typická pro xDSL)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Typ připojení</g:attribute_name>
+        <g:attribute_value>xDSL (VDSL2) — kabelové připojení přes telefonní linku</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Modem</g:attribute_name>
+        <g:attribute_value>DSL modem (Zyxel VMG3625 nebo Sercomm Speedport Plus 2), pronájem 50 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Datový limit</g:attribute_name>
+        <g:attribute_value>Neomezená data</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Akční cena (6 měsíců)</g:attribute_name>
+        <g:attribute_value>299 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Běžná cena</g:attribute_name>
+        <g:attribute_value>549 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Pronájem modemu</g:attribute_name>
+        <g:attribute_value>50 Kč/měsíc (není v ceně tarifu)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Instalace</g:attribute_name>
+        <g:attribute_value>Zdarma (včetně zásuvky pokud chybí)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Smlouva</g:section_name>
+        <g:attribute_name>Závazek</g:attribute_name>
+        <g:attribute_value>Bez závazku</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>Doporučený profil</g:attribute_name>
+        <g:attribute_value>Domácnosti kde není optika, základní streaming a prohlížení</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Důležité upozornění</g:section_name>
+        <g:attribute_name>Omezení technologie</g:attribute_name>
+        <g:attribute_value>Skutečná rychlost závisí na vzdálenosti od ústředny a kvalitě vedení</g:attribute_value>
+      </g:product_detail>
+    </item>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         FIXED WIRELESS (5G) WITH INSTALLATION — 3 products
+         Outdoor 5G antenna + indoor Wi-Fi modem, technician install
+         ═══════════════════════════════════════════════════════════════ -->
+
+    <item>
+      <g:id>tmobile-cz-wireless-50-install</g:id>
+      <g:title>T-Mobile Bezdrátový internet 50 Mb/s s instalací — 5G internet</g:title>
+      <g:description>Bezdrátový 5G internet 50/15 Mb/s s profesionální venkovní instalací. Neomezená data, technik nainstaluje venkovní anténu a vnitřní Wi-Fi modem zdarma. Ideální pro každodenní používání internetu, kde není dostupná optika ani xDSL. Bez závazku.</g:description>
+      <g:link>https://www.t-mobile.cz/bezdratovy-internet</g:link>
+      <g:image_link>https://www.t-mobile.cz/images/bezdratovy-internet-50.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>549 CZK</g:price>
+      <g:sale_price>299 CZK</g:sale_price>
+      <g:sale_price_effective_date>2025-01-01T00:00:00+01:00/2026-04-30T23:59:59+01:00</g:sale_price_effective_date>
+      <g:brand>T-Mobile</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Electronics &gt; Communications &gt; Telephony &gt; Communication Service Providers</g:google_product_category>
+      <g:product_type>Internet &gt; Fixed wireless &gt; 5G &gt; Residential &gt; With installation</g:product_type>
+      <g:identifier_exists>false</g:identifier_exists>
+      <g:custom_label_0>5g-wireless</g:custom_label_0>
+      <g:custom_label_1>entry-tier</g:custom_label_1>
+      <g:custom_label_2>asymmetric</g:custom_label_2>
+      <g:custom_label_3>installed</g:custom_label_3>
+      <g:custom_label_4>promo-299</g:custom_label_4>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Download</g:attribute_name>
+        <g:attribute_value>50 Mb/s</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Upload</g:attribute_name>
+        <g:attribute_value>15 Mb/s</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Symetrie</g:attribute_name>
+        <g:attribute_value>Asymetrický</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Latence</g:attribute_name>
+        <g:attribute_value>20–50 ms (typická pro fixed wireless)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Typ připojení</g:attribute_name>
+        <g:attribute_value>Fixed Wireless 5G s venkovní anténou</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Zařízení</g:attribute_name>
+        <g:attribute_value>Venkovní anténa WNC AF55 5G + vnitřní modem Sercomm Speedport Plus, pronájem 99 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Síť</g:attribute_name>
+        <g:attribute_value>5G síť T-Mobile</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Datový limit</g:attribute_name>
+        <g:attribute_value>Neomezená data</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Akční cena (6 měsíců)</g:attribute_name>
+        <g:attribute_value>299 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Běžná cena</g:attribute_name>
+        <g:attribute_value>549 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Pronájem zařízení</g:attribute_name>
+        <g:attribute_value>99 Kč/měsíc (anténa + modem)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Instalace</g:attribute_name>
+        <g:attribute_value>Zdarma (profesionální technik, venkovní anténa)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Smlouva</g:section_name>
+        <g:attribute_name>Závazek</g:attribute_name>
+        <g:attribute_value>Bez závazku</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>Doporučený profil</g:attribute_name>
+        <g:attribute_value>Každodenní prohlížení, kde není kabelový internet</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Důležité upozornění</g:section_name>
+        <g:attribute_name>Dostupnost</g:attribute_name>
+        <g:attribute_value>Závisí na pokrytí 5G sítí na adrese, nutno ověřit</g:attribute_value>
+      </g:product_detail>
+    </item>
+
+    <item>
+      <g:id>tmobile-cz-wireless-100-install</g:id>
+      <g:title>T-Mobile Bezdrátový internet 100 Mb/s s instalací — 5G internet</g:title>
+      <g:description>Bezdrátový 5G internet 100/25 Mb/s s profesionální venkovní instalací. Neomezená data, technik nainstaluje venkovní anténu a vnitřní Wi-Fi modem zdarma. Pohodlné připojení pro více zařízení najednou. Bez závazku.</g:description>
+      <g:link>https://www.t-mobile.cz/bezdratovy-internet</g:link>
+      <g:image_link>https://www.t-mobile.cz/images/bezdratovy-internet-100.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>649 CZK</g:price>
+      <g:sale_price>299 CZK</g:sale_price>
+      <g:sale_price_effective_date>2025-01-01T00:00:00+01:00/2026-04-30T23:59:59+01:00</g:sale_price_effective_date>
+      <g:brand>T-Mobile</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Electronics &gt; Communications &gt; Telephony &gt; Communication Service Providers</g:google_product_category>
+      <g:product_type>Internet &gt; Fixed wireless &gt; 5G &gt; Residential &gt; With installation</g:product_type>
+      <g:identifier_exists>false</g:identifier_exists>
+      <g:custom_label_0>5g-wireless</g:custom_label_0>
+      <g:custom_label_1>mid-tier</g:custom_label_1>
+      <g:custom_label_2>asymmetric</g:custom_label_2>
+      <g:custom_label_3>installed</g:custom_label_3>
+      <g:custom_label_4>promo-299</g:custom_label_4>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Download</g:attribute_name>
+        <g:attribute_value>100 Mb/s</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Upload</g:attribute_name>
+        <g:attribute_value>25 Mb/s</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Symetrie</g:attribute_name>
+        <g:attribute_value>Asymetrický</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Latence</g:attribute_name>
+        <g:attribute_value>20–50 ms (typická pro fixed wireless)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Typ připojení</g:attribute_name>
+        <g:attribute_value>Fixed Wireless 5G s venkovní anténou</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Zařízení</g:attribute_name>
+        <g:attribute_value>Venkovní anténa WNC AF55 5G + vnitřní modem Sercomm Speedport Plus, pronájem 99 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Síť</g:attribute_name>
+        <g:attribute_value>5G síť T-Mobile</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Datový limit</g:attribute_name>
+        <g:attribute_value>Neomezená data</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Akční cena (6 měsíců)</g:attribute_name>
+        <g:attribute_value>299 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Běžná cena</g:attribute_name>
+        <g:attribute_value>649 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Pronájem zařízení</g:attribute_name>
+        <g:attribute_value>99 Kč/měsíc (anténa + modem)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Instalace</g:attribute_name>
+        <g:attribute_value>Zdarma (profesionální technik, venkovní anténa)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Smlouva</g:section_name>
+        <g:attribute_name>Závazek</g:attribute_name>
+        <g:attribute_value>Bez závazku</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>Doporučený profil</g:attribute_name>
+        <g:attribute_value>Více zařízení najednou, rodiny bez kabelového připojení</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Důležité upozornění</g:section_name>
+        <g:attribute_name>Dostupnost</g:attribute_name>
+        <g:attribute_value>Závisí na pokrytí 5G sítí na adrese, nutno ověřit</g:attribute_value>
+      </g:product_detail>
+    </item>
+
+    <item>
+      <g:id>tmobile-cz-wireless-250-install</g:id>
+      <g:title>T-Mobile Bezdrátový internet 250 Mb/s s instalací — 5G internet</g:title>
+      <g:description>Bezdrátový 5G internet 250/25 Mb/s s profesionální venkovní instalací. Nejrychlejší wireless varianta. Neomezená data, technik nainstaluje venkovní anténu a vnitřní Wi-Fi modem zdarma. Pro plynulé streamování, hry a práci z domova. Bez závazku.</g:description>
+      <g:link>https://www.t-mobile.cz/bezdratovy-internet</g:link>
+      <g:image_link>https://www.t-mobile.cz/images/bezdratovy-internet-250.png</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>749 CZK</g:price>
+      <g:sale_price>299 CZK</g:sale_price>
+      <g:sale_price_effective_date>2025-01-01T00:00:00+01:00/2026-04-30T23:59:59+01:00</g:sale_price_effective_date>
+      <g:brand>T-Mobile</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Electronics &gt; Communications &gt; Telephony &gt; Communication Service Providers</g:google_product_category>
+      <g:product_type>Internet &gt; Fixed wireless &gt; 5G &gt; Residential &gt; With installation</g:product_type>
+      <g:identifier_exists>false</g:identifier_exists>
+      <g:custom_label_0>5g-wireless</g:custom_label_0>
+      <g:custom_label_1>high-tier</g:custom_label_1>
+      <g:custom_label_2>asymmetric</g:custom_label_2>
+      <g:custom_label_3>installed</g:custom_label_3>
+      <g:custom_label_4>promo-299</g:custom_label_4>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Download</g:attribute_name>
+        <g:attribute_value>250 Mb/s</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Upload</g:attribute_name>
+        <g:attribute_value>25 Mb/s</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Symetrie</g:attribute_name>
+        <g:attribute_value>Asymetrický (upload výrazně nižší)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Rychlost</g:section_name>
+        <g:attribute_name>Latence</g:attribute_name>
+        <g:attribute_value>20–50 ms (typická pro fixed wireless)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Typ připojení</g:attribute_name>
+        <g:attribute_value>Fixed Wireless 5G s venkovní anténou</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Zařízení</g:attribute_name>
+        <g:attribute_value>Venkovní anténa WNC AF55 5G + vnitřní modem Sercomm Speedport Plus, pronájem 99 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Síť</g:attribute_name>
+        <g:attribute_value>5G síť T-Mobile</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Technologie</g:section_name>
+        <g:attribute_name>Datový limit</g:attribute_name>
+        <g:attribute_value>Neomezená data</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Akční cena (6 měsíců)</g:attribute_name>
+        <g:attribute_value>299 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Běžná cena</g:attribute_name>
+        <g:attribute_value>749 Kč/měsíc</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Pronájem zařízení</g:attribute_name>
+        <g:attribute_value>99 Kč/měsíc (anténa + modem)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Cena</g:section_name>
+        <g:attribute_name>Instalace</g:attribute_name>
+        <g:attribute_value>Zdarma (profesionální technik, venkovní anténa)</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Smlouva</g:section_name>
+        <g:attribute_name>Závazek</g:attribute_name>
+        <g:attribute_value>Bez závazku</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Vhodné pro</g:section_name>
+        <g:attribute_name>Doporučený profil</g:attribute_name>
+        <g:attribute_value>Streaming, hry, práce z domova bez kabelového připojení</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Důležité upozornění</g:section_name>
+        <g:attribute_name>Dostupnost</g:attribute_name>
+        <g:attribute_value>Závisí na pokrytí 5G sítí na adrese, nutno ověřit</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Důležité upozornění</g:section_name>
+        <g:attribute_name>Počasí a signál</g:attribute_name>
+        <g:attribute_value>Výkon může kolísat podle počasí a vzdálenosti od vysílače</g:attribute_value>
+      </g:product_detail>
+    </item>
+
+  </channel>
+</rss>
